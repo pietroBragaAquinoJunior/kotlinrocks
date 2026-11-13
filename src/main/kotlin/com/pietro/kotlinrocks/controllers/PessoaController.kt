@@ -1,7 +1,7 @@
 package com.pietro.kotlinrocks.controllers
 
 import com.pietro.kotlinrocks.services.PessoaService
-import com.pietro.kotlinrocks.views.PessoaView
+import com.pietro.kotlinrocks.views.PessoaDto
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
@@ -13,7 +13,7 @@ class PessoaController(
 ){
 
     @GetMapping
-    fun teste():List<PessoaView>{
+    fun teste():List<PessoaDto>{
         return pessoaService.findPessoaViewByName("Piêtro")
     }
 
