@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service
 
 @Service
 class PessoaService(
-    var pessoaRepository: PessoaRepository,
+    var pessoaRepository: PessoaRepository
 ){
     fun findPessoaViewByName(name:String):List<PessoaDto>{
         val pessoaMapper: PessoaMapper = Mappers.getMapper(PessoaMapper::class.java)
